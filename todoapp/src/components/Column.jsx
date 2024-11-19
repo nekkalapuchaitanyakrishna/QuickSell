@@ -1,4 +1,3 @@
-// src/components/Column.jsx
 import React from 'react';
 import Card from './Card';
 import '../styles/Column.css';

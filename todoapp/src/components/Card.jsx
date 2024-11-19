@@ -1,4 +1,3 @@
-// src/components/Card.jsx
 import React from 'react';
 import { PRIORITY_MAP, STATUS_ICONS } from '../utils/utils';
 import '../styles/Card.css';

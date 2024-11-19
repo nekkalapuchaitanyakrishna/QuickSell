@@ -1,4 +1,3 @@
-// src/components/Board.jsx
 import React from 'react';
 import Column from './Column';
 import { PRIORITY_MAP, STATUS_ICONS } from '../utils/utils';

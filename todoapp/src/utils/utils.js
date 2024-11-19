@@ -1,4 +1,3 @@
-// src/utils/utils.js
 export const PRIORITY_MAP = {
     4: { name: 'Urgent', icon: '🔴' },
     3: { name: 'High', icon: '🟠' },
