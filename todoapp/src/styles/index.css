@@ -1,0 +1,114 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin: 16px 24px;
+}
+
+.kanban-board {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 16px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+
+.header {
+    background-color: #f8f9fb; /* Light background */
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb; /* Subtle border */
+  }
+  
+  .dropdown-container {
+    position: relative; /* Position relative for absolute positioning of dropdown */
+    display: inline-block;
+  }
+  
+  .dropdown-button {
+    background-color: #ffffff; /* White background */
+    border: 1px solid #d1d5db; /* Light gray border */
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151; /* Dark gray text */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+  }
+  
+  .dropdown-button:hover {
+    border-color: #9ca3af; /* Slightly darker border on hover */
+  }
+  
+  .dropdown-content {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position the dropdown */
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    z-index: 100;
+    top: 40px; /* Position below the button */
+    left: 0;
+    width: 220px;
+  }
+  
+  .dropdown-container:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+  }
+  
+  .dropdown-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+  }
+  
+  .dropdown-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .dropdown-item label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #6b7280; /* Muted gray for labels */
+    margin-bottom: 4px;
+  }
+  
+  .dropdown-content select {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    color: #374151;
+    background-color: #ffffff;
+  }
+  
+  .dropdown-content select:hover {
+    border-color: #9ca3af;
+  }
+  
