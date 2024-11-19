@@ -1,4 +1,3 @@
-// src/App.jsx
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Board from './components/Board';
@@ -13,18 +12,17 @@ function App() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const loadData = async () => {
-            try {
-                const data = await fetchKanbanData();
+        // Using promises instead of async/await
+        fetchKanbanData()
+            .then((data) => {
                 setTickets(data.tickets);
                 setUsers(data.users);
                 setLoading(false);
-            } catch (error) {
+            })
+            .catch((error) => {
                 console.error('Failed to load data:', error);
                 setLoading(false);
-            }
-        };
-        loadData();
+            });
     }, []);
 
     useEffect(() => {
@@ -40,7 +38,7 @@ function App() {
     }
 
     const groupedTickets = groupTickets(tickets, users, view.groupBy);
-    Object.keys(groupedTickets).forEach(key => {
+    Object.keys(groupedTickets).forEach((key) => {
         groupedTickets[key] = sortTickets(groupedTickets[key], view.sortBy);
     });
 
